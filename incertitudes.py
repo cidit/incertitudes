@@ -10,7 +10,12 @@ class NumericIncertitude:
                 magnitude, 
                 incertitude, 
                 incertitude_type):
-        pass
+        self.value = value*10^magnitude
+        self.incertitude_type = incertitude_type
+        if incertitude_type == "absolute":
+            self.incertitude = incertitude * 10^magnitude
+        else:
+            self.incertitude = incertitude
 
     def absolute(self):
         pass
